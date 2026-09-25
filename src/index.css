@@ -1,3 +1,37 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+:root {
+	--brand-gradient: linear-gradient(105deg, #f97316 0%, #ec4899 52%, #7c3aed 100%);
+	font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+	color: #0f172a;
+	background: #ffffff;
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	min-width: 320px;
+}
+
+button,
+a {
+	cursor: pointer;
+}
+
+.brand-gradient {
+	background-image: var(--brand-gradient);
+}
+
+.brand-gradient-text {
+	background-image: var(--brand-gradient);
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+}
+

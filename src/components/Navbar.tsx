@@ -56,7 +56,7 @@ function Navbar() {
           </button>
           <button
             type="button"
-            className="rounded-full bg-gradient-to-r from-orange-500 via-pink-500 to-violet-600 px-5 py-2 text-white shadow-sm transition hover:-translate-y-0.5"
+            className="brand-gradient rounded-full px-5 py-2 text-white shadow-sm transition hover:-translate-y-0.5"
           >
             Sign Up
           </button>
@@ -68,7 +68,7 @@ function Navbar() {
           </button>
           <button
             type="button"
-            className="rounded-full bg-gradient-to-r from-orange-500 via-pink-500 to-violet-600 px-3 py-2 text-white"
+            className="brand-gradient rounded-full px-3 py-2 text-white"
           >
             Sign Up
           </button>

@@ -1,8 +1,5 @@
 import bannerImage from "../assets/banner-stack.png";
 
-const gradientText =
-  "bg-gradient-to-r from-orange-500 via-pink-500 to-violet-600 bg-clip-text text-transparent";
-
 function HeroSection() {
   return (
     <section
@@ -14,7 +11,7 @@ function HeroSection() {
           Build with intention
         </p>
         <h1 className="max-w-xl text-5xl font-black leading-[1.02] tracking-tight sm:text-6xl">
-          Build Your Ideal <span className={gradientText}>Development Stack</span>
+          Build Your Ideal <span className="brand-gradient-text">Development Stack</span>
         </h1>
         <p className="mt-6 max-w-md text-sm leading-7 text-slate-500">
           Explore frontend, backend, database, and tooling options. Compare them
@@ -23,7 +20,7 @@ function HeroSection() {
         <div className="mt-8 flex flex-wrap gap-3">
           <a
             href="#technologies"
-            className="rounded-md bg-gradient-to-r from-orange-500 via-pink-500 to-violet-600 px-5 py-3 text-xs font-semibold text-white shadow-lg shadow-pink-200 transition hover:-translate-y-0.5"
+            className="brand-gradient rounded-md px-5 py-3 text-xs font-semibold text-white shadow-lg shadow-pink-200 transition hover:-translate-y-0.5"
           >
             Explore Technologies
           </a>

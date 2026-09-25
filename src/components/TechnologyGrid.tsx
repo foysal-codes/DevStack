@@ -29,10 +29,7 @@ function TechnologyGrid({
     <section id="technologies" className="mx-auto max-w-6xl px-5 pb-28 md:px-8">
       <div className="mb-8">
         <h2 className="text-2xl font-extrabold tracking-tight">
-          Explore the{" "}
-          <span className="bg-gradient-to-r from-orange-500 via-pink-500 to-violet-600 bg-clip-text text-transparent">
-            Technologies
-          </span>
+          Explore the <span className="brand-gradient-text">Technologies</span>
         </h2>
         <p className="mt-2 text-xs text-slate-400">
           Compare practical tools and start shaping your next development stack.
