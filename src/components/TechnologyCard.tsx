@@ -2,10 +2,15 @@ import type { Technology } from "../types/technology";
 
 type TechnologyCardProps = {
   technology: Technology;
+  isSelected: boolean;
   onAdd?: (technology: Technology) => void;
 };
 
-function TechnologyCard({ technology, onAdd }: TechnologyCardProps) {
+function TechnologyCard({
+  technology,
+  isSelected,
+  onAdd,
+}: TechnologyCardProps) {
   return (
     <article className="flex min-h-64 flex-col rounded-xl border border-slate-100 bg-white p-4 shadow-[0_4px_18px_rgba(15,23,42,0.04)] transition hover:-translate-y-1 hover:shadow-lg">
       <div className="flex items-start justify-between">
@@ -19,16 +24,21 @@ function TechnologyCard({ technology, onAdd }: TechnologyCardProps) {
         {technology.description}
       </p>
       <div className="mt-auto flex items-center justify-between gap-2 pt-5 text-[9px] text-slate-500">
-        <span className="rounded bg-slate-50 px-2 py-1">{technology.category}</span>
+        <span className="rounded bg-slate-50 px-2 py-1">
+          {technology.category}
+        </span>
         <span>{technology.difficulty}</span>
-        <span className="font-semibold text-slate-700">★ {technology.rating}</span>
+        <span className="font-semibold text-slate-700">
+          ★ {technology.rating}
+        </span>
       </div>
       <button
         type="button"
+        disabled={isSelected}
         onClick={() => onAdd?.(technology)}
-        className="mt-4 w-full rounded-md bg-slate-950 py-2.5 text-[10px] font-semibold text-white transition hover:bg-pink-600"
+        className="mt-4 w-full rounded-md bg-slate-950 py-2.5 text-[10px] font-semibold text-white transition hover:bg-pink-600 disabled:cursor-not-allowed disabled:bg-slate-200 disabled:text-slate-500"
       >
-        Add to Stack
+        {isSelected ? "✓ Added to Stack" : "Add to Stack"}
       </button>
     </article>
   );
