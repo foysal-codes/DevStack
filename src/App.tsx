@@ -1,12 +1,13 @@
-import { useState } from "react";
+import { lazy, Suspense, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import AboutSection from "./components/AboutSection";
 import Footer from "./components/Footer";
 import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";
-import TechnologyGrid from "./components/TechnologyGrid";
 import type { Technology } from "./types/technology";
+
+const TechnologyGrid = lazy(() => import("./components/TechnologyGrid"));
 
 function App() {
   const [selected, setSelected] = useState<Technology[]>([]);
@@ -43,12 +44,14 @@ function App() {
       <Navbar />
       <main>
         <HeroSection />
-        <TechnologyGrid
-          selected={selected}
-          onAdd={addToStack}
-          onRemove={removeFromStack}
-          onRemoveAll={removeAll}
-        />
+        <Suspense fallback={<p>Loading...</p>}>
+          <TechnologyGrid
+            selected={selected}
+            onAdd={addToStack}
+            onRemove={removeFromStack}
+            onRemoveAll={removeAll}
+          />
+        </Suspense>
         <AboutSection />
       </main>
       <Footer />
