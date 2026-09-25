@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import AboutSection from "./components/AboutSection";
 import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";
 import TechnologyGrid from "./components/TechnologyGrid";
@@ -47,6 +48,7 @@ function App() {
           onRemove={removeFromStack}
           onRemoveAll={removeAll}
         />
+        <AboutSection />
       </main>
       <ToastContainer position="bottom-right" autoClose={2600} theme="light" />
     </div>
