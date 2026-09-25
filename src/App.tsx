@@ -1,5 +1,6 @@
 import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";
+import TechnologyGrid from "./components/TechnologyGrid";
 
 function App() {
   return (
@@ -7,6 +8,7 @@ function App() {
       <Navbar />
       <main>
         <HeroSection />
+        <TechnologyGrid />
       </main>
     </div>
   );
