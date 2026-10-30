@@ -1,5 +1,6 @@
 
 Project Name: Dev Stack Builder
+Live: https://developer-stack-bd.netlify.app/
 
 Description: Dev Stack Builder is a responsive React application for exploring development technologies and creating a focused personal stack. Users can compare tools, review their categories and difficulty levels, and save the technologies they want to use in one simple workspace.
 
